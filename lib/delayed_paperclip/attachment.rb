@@ -63,10 +63,15 @@ module DelayedPaperclip
       end
 
       def process_delayed!
+        puts 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH'
         self.job_is_processing = true
+        puts 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH'
         self.post_processing = true
+        puts 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH'
         reprocess!(*delayed_only_process)
+        puts 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH'
         self.job_is_processing = false
+        puts 'HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH'
         update_processing_column
       end
 
